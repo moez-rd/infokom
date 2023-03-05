@@ -18,6 +18,9 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
   const mulStaff = f.filterOrganizer(notionOrganizers, c.MUL_STAFF);
   const pubStaff = f.filterOrganizer(notionOrganizers, c.PUB_STAFF);
 
+  console.log(pubStaff[0]);
+  
+
   return (
     <>
       <Head>
@@ -59,28 +62,28 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
                 <ProfileCard
                   title="Kepala Dinas"
                   name={leader[0].properties.Name.title[0].text.content}
-                  quote={leader[0].properties.Quote.rich_text[0].text.content}
-                  image={leader[0].properties.Photo.files[0].file.url}
+                  quote={leader[0].properties.Quote.rich_text[0]?.text.content}
+                  image={leader[0].properties.Photo.files[0]?.file.url}
                 />
                 <ProfileCard
                   title="Wakil Kepala Dinas"
                   name={coLeader[0].properties.Name.title[0].text.content}
-                  quote={coLeader[0].properties.Quote.rich_text[0].text.content}
-                  image={coLeader[0].properties.Photo.files[0].file.url}
+                  quote={coLeader[0].properties.Quote.rich_text[0]?.text.content}
+                  image={coLeader[0].properties.Photo.files[0]?.file.url}
                 />
               </ul>
               <ul className="grid grid-cols-2 mt-4 gap-4">
                 <ProfileCard
                   title="Kepala Divisi Multimedia"
                   name={mulHead[0].properties.Name.title[0].text.content}
-                  quote={mulHead[0].properties.Quote.rich_text[0].text.content}
-                  image={mulHead[0].properties.Photo.files[0].file.url}
+                  quote={mulHead[0].properties.Quote.rich_text[0]?.text.content}
+                  image={mulHead[0].properties.Photo.files[0]?.file.url}
                 />
                 <ProfileCard
                   title="Kepala Divisi Publikasi"
                   name={pubHead[0].properties.Name.title[0].text.content}
-                  quote={pubHead[0].properties.Quote.rich_text[0].text.content}
-                  image={pubHead[0].properties.Photo.files[0].file.url}
+                  quote={pubHead[0].properties.Quote.rich_text[0]?.text.content}
+                  image={pubHead[0].properties.Photo.files[0]?.file.url}
                 />
               </ul>
             </div>
@@ -91,8 +94,8 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
                   <ProfileCard
                     key={staff.id}
                     name={staff.properties.Name.title[0].text.content}
-                    quote={staff.properties.Quote.rich_text[0].text.content}
-                    image={staff.properties.Photo.files[0].file.url}
+                    quote={staff.properties.Quote.rich_text[0]?.text.content}
+                    image={staff.properties.Photo.files[0]?.file.url}
                   />;
                 })}
               </ul>
@@ -104,9 +107,9 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
                   <ProfileCard
                     key={staff.id}
                     name={staff.properties.Name.title[0].text.content}
-                    quote={staff.properties.Quote.rich_text[0].text.content}
-                    image={staff.properties.Photo.files[0].file.url}
-                  />;
+                    quote={staff.properties.Quote.rich_text[0]?.text.content}
+                    image={staff.properties.Photo.files[0]?.file.url}
+                  />
                 })}
               </ul>
             </div>
