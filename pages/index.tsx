@@ -11,12 +11,12 @@ const notion = new Client({ auth: process.env.NOTION_KEY });
 const databaseId = process.env.NOTION_DATABASE_ID ?? "";
 
 export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
-  console.log(notionOrganizers);
-
   const leader = f.filterOrganizer(notionOrganizers, c.LEADER);
   const coLeader = f.filterOrganizer(notionOrganizers, c.CO_LEADER);
   const mulHead = f.filterOrganizer(notionOrganizers, c.MUL_HEAD);
   const pubHead = f.filterOrganizer(notionOrganizers, c.PUB_HEAD);
+  const mulStaff = f.filterOrganizer(notionOrganizers, c.MUL_STAFF);
+  const pubStaff = f.filterOrganizer(notionOrganizers, c.PUB_STAFF);
 
   return (
     <>
@@ -87,19 +87,27 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
             <div>
               <h2 className="text-3xl text-blue-500">Staff Multimedia</h2>
               <ul className="grid grid-flow-col mt-8 gap-4">
-                <ProfileCard name="Lorem Ipsum" quote="bajsbdjas" image="" />
-                <ProfileCard name="Lorem Ipsum" quote="bajsbdjas" image="" />
-                <ProfileCard name="Lorem Ipsum" quote="bajsbdjas" image="" />
-                <ProfileCard name="Lorem Ipsum" quote="bajsbdjas" image="" />
-                <ProfileCard name="Lorem Ipsum" quote="bajsbdjas" image="" />
+                {mulStaff.map((staff: any) => {
+                  <ProfileCard
+                    key={staff.id}
+                    name={staff.properties.Name.title[0].text.content}
+                    quote={staff.properties.Quote.rich_text[0].text.content}
+                    image={staff.properties.Photo.files[0].file.url}
+                  />;
+                })}
               </ul>
             </div>
             <div>
               <h2 className="text-3xl text-blue-500">Staff Publikasi</h2>
               <ul className="grid grid-flow-col mt-8 gap-4">
-                <ProfileCard name="Lorem Ipsum" quote="bajsbdjas" image="" />
-                <ProfileCard name="Lorem Ipsum" quote="bajsbdjas" image="" />
-                <ProfileCard name="Lorem Ipsum" quote="bajsbdjas" image="" />
+                {pubStaff.map((staff: any) => {
+                  <ProfileCard
+                    key={staff.id}
+                    name={staff.properties.Name.title[0].text.content}
+                    quote={staff.properties.Quote.rich_text[0].text.content}
+                    image={staff.properties.Photo.files[0].file.url}
+                  />;
+                })}
               </ul>
             </div>
           </section>
