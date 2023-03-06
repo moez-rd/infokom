@@ -4,7 +4,7 @@ import NavbarLink from "./NavbarLink";
 
 const Navbar: FC = () => {
   return (
-    <nav className="sm:px-40 border-b py-6">
+    <nav className="md:px-40 border-b py-6">
       <ul className="flex justify-center space-x-10">
         <NavbarLink name="Home" href="/" />
         <NavbarLink name="Program Kerja" href="/program-kerja" />

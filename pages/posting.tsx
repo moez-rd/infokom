@@ -19,7 +19,7 @@ export default function Posting({ notionWorkTasks }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="mx-2">
+      <div className="mx-2 sm:mx-4 xl:mx-auto">
         <header className="mx-auto text-center py-20 sm:py-40">
           <h1 className="text-5xl font-black mt-4 text-blue-500">Posting</h1>
         </header>
