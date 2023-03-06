@@ -31,14 +31,14 @@ export default function Home({ notionWorkTasks, notionOrganizers }: any) {
       </Head>
 
         <header className="py-40 bg-blue-500 px-4 text-center relative">
-        <svg className="w-16 md:w-20 mx-auto fill-blue-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M192 64L160 0H128L96 64 64 0H48C21.5 0 0 21.5 0 48V256H384V48c0-26.5-21.5-48-48-48H224L192 64zM0 288v32c0 35.3 28.7 64 64 64h64v64c0 35.3 28.7 64 64 64s64-28.7 64-64V384h64c35.3 0 64-28.7 64-64V288H0zM192 464c-8.8 0-16-7.2-16-16s7.2-16 16-16s16 7.2 16 16s-7.2 16-16 16z"/></svg>
-          <p className="text-sm md:text-base mt-8 text-gray-100">
+        <svg className="w-16 md:w-20 mx-auto fill-blue-900/80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M192 64L160 0H128L96 64 64 0H48C21.5 0 0 21.5 0 48V256H384V48c0-26.5-21.5-48-48-48H224L192 64zM0 288v32c0 35.3 28.7 64 64 64h64v64c0 35.3 28.7 64 64 64s64-28.7 64-64V384h64c35.3 0 64-28.7 64-64V288H0zM192 464c-8.8 0-16-7.2-16-16s7.2-16 16-16s16 7.2 16 16s-7.2 16-16 16z"/></svg>
+          <p className="text-sm md:text-base mt-8 text-blue-100">
             <span className="tracking-[1.2rem]">-DINAS</span>-
           </p>
-          <h1 className="text-4xl md:text-5xl font-black mt-1 sm:mt-4 text-gray-100">
+          <h1 className="text-4xl md:text-5xl font-black mt-1 sm:mt-4 text-blue-100">
             Informasi dan Komunikasi
           </h1>
-          <p className="text-blue-100 font-light">
+          <p className="text-blue-300 font-light">
             Himpunan Mahasiswa Sistem Komputer Universitas Sriwijaya
           </p>
         </header>
