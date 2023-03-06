@@ -12,7 +12,7 @@ const NavbarLink: FC<Props> = ({ name, href }) => {
       <div className="bg-gray-600 w-2 h-1"></div>
       <Link
         href={href}
-        className="tracking-widest text-sm uppercase text-gray-600 font-light "
+        className="tracking-widest text-xs sm:text-sm uppercase text-gray-600 font-light "
       >
         {name}
       </Link>

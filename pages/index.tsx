@@ -32,7 +32,7 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-2 sm:mx-auto">
         <header className="py-40 text-center">
           <Image
             src="/infokom.svg"
@@ -57,7 +57,7 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
           <section className="text-center space-y-20">
             <div>
               <h2 className="text-3xl text-blue-500">Pengurus Dinas</h2>
-              <ul className="grid grid-cols-2 mt-8 gap-4">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 mt-8 gap-4">
                 <ProfileCard
                   title="Kepala Dinas"
                   name={leader[0].properties.Name.title[0].text.content}
@@ -73,7 +73,7 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
                   image={coLeader[0].properties.Photo.files[0]?.file.url}
                 />
               </ul>
-              <ul className="grid grid-cols-2 mt-4 gap-4">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 mt-4 gap-4">
                 <ProfileCard
                   title="Kepala Divisi Multimedia"
                   name={mulHead[0].properties.Name.title[0].text.content}
@@ -90,7 +90,7 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
             </div>
             <div>
               <h2 className="text-3xl text-blue-500">Staff Multimedia</h2>
-              <ul className="grid grid-flow-col mt-8 gap-4">
+              <ul className="grid grid-cols-1 sm:grid-flow-col mt-8 gap-4">
                 <ProfileCard
                   name={mulStaff[0].properties.Name.title[0]?.text.content}
                   quote={
@@ -130,7 +130,7 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
             </div>
             <div>
               <h2 className="text-3xl text-blue-500">Staff Publikasi</h2>
-              <ul className="grid grid-flow-col mt-8 gap-4">
+              <ul className="grid grid-cols-1 sm:grid-flow-col mt-8 gap-4">
                 <ProfileCard
                   name={pubStaff[0].properties.Name.title[0]?.text.content}
                   quote={
@@ -156,7 +156,7 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
             </div>
           </section>
           <Divider />
-          <section className="grid grid-cols-2 gap-8">
+          <section className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div className="border px-6 pt-12 pb-6 relative bg-gray-100 rounded">
               <h2 className="text-3xl absolute -top-4 right-10 text-blue-500">
                 Kilasan
@@ -189,7 +189,7 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
             <h2 className="text-3xl text-blue-500">
               Laporan Postingan Tahun 2023
             </h2>
-            <ul className="grid grid-cols-3 mt-4 gap-6">
+            <ul className="grid grid-cols-1 sm:grid-cols-3 mt-4 gap-6">
               <ReportCountCard
                 title="Hari-Hari Besar"
                 number={f.countReports(notionWorkPrograms, c.HARI_HARI_BESAR)}
