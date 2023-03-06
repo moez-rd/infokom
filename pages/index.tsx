@@ -19,7 +19,6 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
   const pubStaff = f.filterOrganizer(notionOrganizers, c.PUB_STAFF);
 
   console.log(pubStaff[0]);
-  
 
   return (
     <>
@@ -68,7 +67,9 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
                 <ProfileCard
                   title="Wakil Kepala Dinas"
                   name={coLeader[0].properties.Name.title[0].text.content}
-                  quote={coLeader[0].properties.Quote.rich_text[0]?.text.content}
+                  quote={
+                    coLeader[0].properties.Quote.rich_text[0]?.text.content
+                  }
                   image={coLeader[0].properties.Photo.files[0]?.file.url}
                 />
               </ul>
@@ -90,27 +91,67 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
             <div>
               <h2 className="text-3xl text-blue-500">Staff Multimedia</h2>
               <ul className="grid grid-flow-col mt-8 gap-4">
-                {mulStaff.map((staff: any) => {
-                  <ProfileCard
-                    key={staff.id}
-                    name={staff.properties.Name.title[0].text.content}
-                    quote={staff.properties.Quote.rich_text[0]?.text.content}
-                    image={staff.properties.Photo.files[0]?.file.url}
-                  />;
-                })}
+                <ProfileCard
+                  name={mulStaff[0].properties.Name.title[0]?.text.content}
+                  quote={
+                    mulStaff[0].properties.Quote.rich_text[0]?.text.content
+                  }
+                  image={mulStaff[0].properties.Photo.files[0]?.file.url}
+                />
+                <ProfileCard
+                  name={mulStaff[1].properties.Name.title[0]?.text.content}
+                  quote={
+                    mulStaff[1].properties.Quote.rich_text[0]?.text.content
+                  }
+                  image={mulStaff[1].properties.Photo.files[0]?.file.url}
+                />
+                <ProfileCard
+                  name={mulStaff[2].properties.Name.title[0]?.text.content}
+                  quote={
+                    mulStaff[2].properties.Quote.rich_text[0]?.text.content
+                  }
+                  image={mulStaff[2].properties.Photo.files[0]?.file.url}
+                />
+                <ProfileCard
+                  name={mulStaff[3].properties.Name.title[0]?.text.content}
+                  quote={
+                    mulStaff[3].properties.Quote.rich_text[0]?.text.content
+                  }
+                  image={mulStaff[3].properties.Photo.files[0]?.file.url}
+                />
+                <ProfileCard
+                  name={mulStaff[4].properties.Name.title[0]?.text.content}
+                  quote={
+                    mulStaff[4].properties.Quote.rich_text[0]?.text.content
+                  }
+                  image={mulStaff[4].properties.Photo.files[0]?.file.url}
+                />
               </ul>
             </div>
             <div>
               <h2 className="text-3xl text-blue-500">Staff Publikasi</h2>
               <ul className="grid grid-flow-col mt-8 gap-4">
-                {pubStaff.map((staff: any) => {
-                  <ProfileCard
-                    key={staff.id}
-                    name={staff.properties.Name.title[0].text.content}
-                    quote={staff.properties.Quote.rich_text[0]?.text.content}
-                    image={staff.properties.Photo.files[0]?.file.url}
-                  />
-                })}
+                <ProfileCard
+                  name={pubStaff[0].properties.Name.title[0]?.text.content}
+                  quote={
+                    pubStaff[0].properties.Quote.rich_text[0]?.text.content
+                  }
+                  image={pubStaff[0].properties.Photo.files[0]?.file.url}
+                />
+                <ProfileCard
+                  name={pubStaff[1].properties.Name.title[0]?.text.content}
+                  quote={
+                    pubStaff[1].properties.Quote.rich_text[0]?.text.content
+                  }
+                  image={pubStaff[1].properties.Photo.files[0]?.file.url}
+                />
+                <ProfileCard
+                  name={pubStaff[2].properties.Name.title[0]?.text.content}
+                  quote={
+                    pubStaff[2].properties.Quote.rich_text[0]?.text.content
+                  }
+                  image={pubStaff[2].properties.Photo.files[0]?.file.url}
+                />
               </ul>
             </div>
           </section>
