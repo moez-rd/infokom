@@ -72,7 +72,7 @@ export default function Posting({ notionWorkTasks }: any) {
                       </p>
                     </div>
                   </div>
-                  <div className="flex space-x-2 text-gray-700 text-sm">
+                  <div className="flex space-x-2 text-gray-700 text-sm mt-1">
                     <div className="border px-2 rounded">
                       <p>{result.properties.Date.date.start}</p>
                     </div>

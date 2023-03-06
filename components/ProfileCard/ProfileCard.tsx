@@ -22,7 +22,7 @@ const ProfileCard: FC<Props> = ({ title, name, quote, image }) => {
       )}
       <p className="sm:text-lg font-bold mt-2">{name}</p>
       <h4 className="text-sm text-gray-600">{title}</h4>
-      <p className="text-sm sm:text-base mt-4 italic text-gray-400">{quote}</p>
+      <p className="text-sm sm:text-base mt-2 italic text-gray-400">{quote}</p>
     </li>
   );
 };
