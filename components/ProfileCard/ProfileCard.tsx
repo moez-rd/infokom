@@ -13,16 +13,16 @@ const ProfileCard: FC<Props> = ({ title, name, quote, image }) => {
     <li className="border flex flex-col items-center p-4 rounded">
       {image && (
         <Image
-        src={image}
-        alt="organizer"
-        width={130}
-        height={130}
-        className="rounded-full"
-      />
+          src={image}
+          alt="organizer"
+          width={50}
+          height={50}
+          className="w-20 sm:w-28 rounded-full"
+        />
       )}
-      <p className="text-lg font-bold">{name}</p>
+      <p className="sm:text-lg font-bold mt-2">{name}</p>
       <h4 className="text-sm text-gray-600">{title}</h4>
-      <p className="mt-4 italic text-gray-400">{quote}</p>
+      <p className="text-sm sm:text-base mt-4 italic text-gray-400">{quote}</p>
     </li>
   );
 };

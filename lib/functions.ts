@@ -1,7 +1,7 @@
 import * as c from "@/lib/constants";
 
-export function countReports(notionWorkPrograms: any, category: string) {
-  return notionWorkPrograms.results.filter((result: any) => {
+export function countReports(notionWorkTasks: any, category: string) {
+  return notionWorkTasks.results.filter((result: any) => {
     return (
       result.properties.Category.select.name == category &&
       result.properties.Status.status.name == c.PUBLISHED

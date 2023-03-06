@@ -10,7 +10,7 @@ import Link from "next/link";
 const notion = new Client({ auth: process.env.NOTION_KEY });
 const databaseId = process.env.NOTION_DATABASE_ID ?? "";
 
-export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
+export default function Home({ notionWorkTasks, notionOrganizers }: any) {
   const leader = f.filterOrganizer(notionOrganizers, c.LEADER);
   const coLeader = f.filterOrganizer(notionOrganizers, c.CO_LEADER);
   const mulHead = f.filterOrganizer(notionOrganizers, c.MUL_HEAD);
@@ -18,7 +18,7 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
   const mulStaff = f.filterOrganizer(notionOrganizers, c.MUL_STAFF);
   const pubStaff = f.filterOrganizer(notionOrganizers, c.PUB_STAFF);
 
-  console.log(pubStaff[0]);
+  console.log(mulStaff);
 
   return (
     <>
@@ -33,7 +33,7 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
       </Head>
 
       <div className="max-w-6xl mx-2 sm:mx-auto">
-        <header className="py-40 text-center">
+        <header className="py-40 px-4 text-center">
           <Image
             src="/infokom.svg"
             alt="Infokom logo"
@@ -41,10 +41,10 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
             height={60}
             className="mx-auto"
           />
-          <p className="mt-8 text-gray-600">
+          <p className="text-sm sm:text-base mt-8 text-gray-600">
             <span className="tracking-[1.2rem]">-DINAS</span>-
           </p>
-          <h1 className="text-5xl font-black mt-4 text-gray-900">
+          <h1 className="text-4xl sm:text-5xl font-black mt-1 sm:mt-4 text-gray-900">
             Informasi dan Komunikasi
           </h1>
           <p className="text-blue-500 font-light">
@@ -90,7 +90,7 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
             </div>
             <div>
               <h2 className="text-3xl text-blue-500">Staff Multimedia</h2>
-              <ul className="grid grid-cols-1 sm:grid-flow-col mt-8 gap-4">
+              <ul className="grid grid-cols-1 sm:grid-cols-5 mt-8 gap-4">
                 <ProfileCard
                   name={mulStaff[0].properties.Name.title[0]?.text.content}
                   quote={
@@ -130,7 +130,7 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
             </div>
             <div>
               <h2 className="text-3xl text-blue-500">Staff Publikasi</h2>
-              <ul className="grid grid-cols-1 sm:grid-flow-col mt-8 gap-4">
+              <ul className="grid grid-cols-1 sm:grid-cols-3 mt-8 gap-4">
                 <ProfileCard
                   name={pubStaff[0].properties.Name.title[0]?.text.content}
                   quote={
@@ -164,7 +164,7 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
               <p className="text-[10rem] absolute -top-20 left-0 text-gray-400">
                 &quot;
               </p>
-              <p className="max-w-3xl mx-auto tracking-wider text-lg">
+              <p className="max-w-3xl mx-auto tracking-wider sm:text-lg">
                 Infokom adalah dinas yang berperan dalam pembentukkan citra
                 Himasisko Unsri serta memberikan informasi kepada seluruh
                 mahasiswa Sistem Komputer Universitas Sriwijaya.
@@ -177,7 +177,7 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
               <p className="text-[10rem] absolute -top-20 left-0 text-gray-400">
                 &quot;
               </p>
-              <p className="max-w-3xl mx-auto tracking-wider text-lg">
+              <p className="max-w-3xl mx-auto tracking-wider sm:text-lg">
                 Menjadikan media komunikasi sebagai cermin dari Himasisko Unsri
                 serta wadah pencerdasan dengan menggunakan jaringan yang
                 informatif dan komunikatif.
@@ -186,33 +186,32 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
           </section>
           <Divider />
           <section className="text-center">
-            <h2 className="text-3xl text-blue-500">
-              Laporan Postingan Tahun 2023
-            </h2>
+            <h2 className="text-3xl text-blue-500">Laporan Postingan</h2>
+            <p className="text-sm text-gray-500">Februari 2023 s.d. sekarang</p>
             <ul className="grid grid-cols-1 sm:grid-cols-3 mt-4 gap-6">
               <ReportCountCard
                 title="Hari-Hari Besar"
-                number={f.countReports(notionWorkPrograms, c.HARI_HARI_BESAR)}
+                number={f.countReports(notionWorkTasks, c.HARI_HARI_BESAR)}
               />
               <ReportCountCard
                 title="SK Information"
-                number={f.countReports(notionWorkPrograms, c.SK_INFORMATION)}
+                number={f.countReports(notionWorkTasks, c.SK_INFORMATION)}
               />
               <ReportCountCard
                 title="Tech Story"
-                number={f.countReports(notionWorkPrograms, c.TECH_STORY)}
+                number={f.countReports(notionWorkTasks, c.TECH_STORY)}
               />
               <ReportCountCard
                 title="Tech Tips"
-                number={f.countReports(notionWorkPrograms, c.TECH_TIPS)}
+                number={f.countReports(notionWorkTasks, c.TECH_TIPS)}
               />
               <ReportCountCard
                 title="SK Berprestasi"
-                number={f.countReports(notionWorkPrograms, c.SK_BERPRESTASI)}
+                number={f.countReports(notionWorkTasks, c.SK_BERPRESTASI)}
               />
               <ReportCountCard
                 title="Ultah BPH"
-                number={f.countReports(notionWorkPrograms, c.ULTAH_BPH)}
+                number={f.countReports(notionWorkTasks, c.ULTAH_BPH)}
               />
             </ul>
             <div className="mt-8">
@@ -231,14 +230,8 @@ export default function Home({ notionWorkPrograms, notionOrganizers }: any) {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const notionWorkPrograms = await notion.databases.query({
+  const notionWorkTasks = await notion.databases.query({
     database_id: databaseId,
-    sorts: [
-      {
-        property: "Date",
-        direction: "ascending",
-      },
-    ],
     filter: {
       or: [
         {
@@ -261,6 +254,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   });
 
   return {
-    props: { notionWorkPrograms, notionOrganizers },
+    props: { notionWorkTasks, notionOrganizers },
   };
 };
