@@ -37,14 +37,12 @@ export default function Posting({ notionWorkTasks }: any) {
                       {result.properties.Category.select.name}
                     </p>
                   </div>
-                  <h2 className="text-lg font-bold text-blue-500">
-                    <button>
-                      {result.properties.Name.title[0]?.text.content ? (
-                        result.properties.Name.title[0]?.text.content
-                      ) : (
-                        <span className="text-gray-500">Tanpa Judul</span>
-                      )}
-                    </button>
+                  <h2 className="text-lg font-bold leading-tight text-blue-500">
+                    {result.properties.Name.title[0]?.text.content ? (
+                      result.properties.Name.title[0]?.text.content
+                    ) : (
+                      <span className="text-gray-500">Tanpa Judul</span>
+                    )}
                   </h2>
                   <div className="flex space-x-2 text-sm text-gray-500">
                     <div>
