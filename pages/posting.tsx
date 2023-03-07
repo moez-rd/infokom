@@ -28,6 +28,8 @@ export default function Posting({ notionWorkTasks }: any) {
           <ul className="mt-10 space-y-4">
             {notionWorkTasks.results.map((result: any) => (
               <li key={result.id}>
+                {/* Float Window for feed photo preview */}
+                {/* <div className="fixed inset-y-20 inset-x-0 mx-auto w-[30vw] bg-white/80 shadow-lg backdrop-blur-sm"></div> */}
                 <div className="rounded border p-4">
                   <div className="flex items-center space-x-1">
                     <div className="h-1 w-2 bg-gray-600"></div>
@@ -36,11 +38,13 @@ export default function Posting({ notionWorkTasks }: any) {
                     </p>
                   </div>
                   <h2 className="text-lg font-bold text-blue-500">
-                    {result.properties.Name.title[0]?.text.content ? (
-                      result.properties.Name.title[0]?.text.content
-                    ) : (
-                      <span className="text-gray-500">Tanpa Judul</span>
-                    )}
+                    <button>
+                      {result.properties.Name.title[0]?.text.content ? (
+                        result.properties.Name.title[0]?.text.content
+                      ) : (
+                        <span className="text-gray-500">Tanpa Judul</span>
+                      )}
+                    </button>
                   </h2>
                   <div className="flex space-x-2 text-sm text-gray-500">
                     <div>
