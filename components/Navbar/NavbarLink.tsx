@@ -8,11 +8,11 @@ interface Props {
 
 const NavbarLink: FC<Props> = ({ name, href }) => {
   return (
-    <li className="flex space-x-1 items-center hover:-translate-y-0.5">
-      <div className="bg-gray-600 w-2 h-1"></div>
+    <li className="flex items-center space-x-1 hover:-translate-y-0.5">
+      <div className="h-1 w-2 bg-gray-600"></div>
       <Link
         href={href}
-        className="tracking-widest text-xs sm:text-sm uppercase text-gray-600 font-light "
+        className="text-xs font-light uppercase tracking-widest text-gray-600 sm:text-sm "
       >
         {name}
       </Link>

@@ -20,18 +20,18 @@ export default function Posting({ notionWorkTasks }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="mx-2 sm:mx-4 xl:mx-auto">
-        <header className="mx-auto text-center py-20 sm:py-40">
-          <h1 className="text-5xl font-black mt-4 text-blue-500">Posting</h1>
+        <header className="mx-auto py-20 text-center sm:py-40">
+          <h1 className="mt-4 text-5xl font-black text-blue-500">Posting</h1>
         </header>
         <Divider />
         <main className="m-10 mx-auto max-w-2xl">
           <ul className="mt-10 space-y-4">
             {notionWorkTasks.results.map((result: any) => (
               <li key={result.id}>
-                <div className="border p-4 rounded">
-                  <div className="flex space-x-1 items-center">
-                    <div className="bg-gray-600 w-2 h-1"></div>
-                    <p className="uppercase text-sm tracking-widest text-gray-600">
+                <div className="rounded border p-4">
+                  <div className="flex items-center space-x-1">
+                    <div className="h-1 w-2 bg-gray-600"></div>
+                    <p className="text-sm uppercase tracking-widest text-gray-600">
                       {result.properties.Category.select.name}
                     </p>
                   </div>
@@ -42,7 +42,7 @@ export default function Posting({ notionWorkTasks }: any) {
                       <span className="text-gray-500">Tanpa Judul</span>
                     )}
                   </h2>
-                  <div className="flex space-x-2 text-gray-500 text-sm">
+                  <div className="flex space-x-2 text-sm text-gray-500">
                     <div>
                       <p className="flex items-center space-x-1">
                         <svg
@@ -72,12 +72,12 @@ export default function Posting({ notionWorkTasks }: any) {
                       </p>
                     </div>
                   </div>
-                  <div className="flex space-x-2 text-gray-700 text-sm mt-1">
-                    <div className="border px-2 rounded">
+                  <div className="mt-1 flex space-x-2 text-sm text-gray-700">
+                    <div className="rounded border px-2">
                       <p>{result.properties.Date.date.start}</p>
                     </div>
                     <div
-                      className={`px-2 rounded ${
+                      className={`rounded px-2 ${
                         result.properties.Status.status.name == c.PUBLISHED
                           ? "bg-green-300 text-green-700"
                           : "bg-blue-300 text-blue-700"

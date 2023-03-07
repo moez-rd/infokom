@@ -1,10 +1,10 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-      <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="/manifest.json" />
         <link
           href="/icons/icon-16x16.png"
           rel="icon"
@@ -25,5 +25,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }

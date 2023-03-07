@@ -7,9 +7,9 @@ interface Props {
 
 const ReportCountCard: FC<Props> = ({ title, number }) => {
   return (
-    <li className="text-center border px-2 py-4">
+    <li className="border px-2 py-4 text-center">
       <p className="text-5xl text-gray-500">{number}</p>
-      <h3 className="font-medium text-sm">{title}</h3>
+      <h3 className="text-sm font-medium">{title}</h3>
     </li>
   );
 };

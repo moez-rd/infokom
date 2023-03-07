@@ -19,8 +19,8 @@ export default function ProgramKerja({ notionWorkPrograms }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="mx-2 sm:mx-4 xl:mx-auto">
-        <header className="mx-auto text-center py-20 sm:py-40">
-          <h1 className="text-5xl font-black mt-4 text-blue-500">
+        <header className="mx-auto py-20 text-center sm:py-40">
+          <h1 className="mt-4 text-5xl font-black text-blue-500">
             Program Kerja
           </h1>
         </header>
@@ -29,19 +29,19 @@ export default function ProgramKerja({ notionWorkPrograms }: any) {
           <ul className="mt-10 space-y-16">
             {notionWorkPrograms.results.map((result: any) => (
               <li key={result.id}>
-                <div className="border px-6 pt-12 pb-6 relative bg-gray-100 rounded">
-                  <h2 className="text-3xl absolute -top-4 text-right w-60 right-10 text-blue-500">
+                <div className="relative rounded border bg-gray-100 px-6 pt-12 pb-6">
+                  <h2 className="absolute -top-4 right-10 w-60 text-right text-3xl text-blue-500">
                     {result.properties.Name.title[0]?.text.content ? (
                       result.properties.Name.title[0]?.text.content
                     ) : (
                       <span className="text-gray-500">Tanpa Judul</span>
                     )}
                   </h2>
-                  <p className="text-[10rem] absolute -top-20 left-0 text-gray-400">
+                  <p className="absolute -top-20 left-0 text-[10rem] text-gray-400">
                     &quot;
                   </p>
-                  <div className="flex space-x-1 text-gray-500 text-sm mt-10">
-                    <p className="px-1 rounded bg-orange-300 text-orange-700">
+                  <div className="mt-10 flex space-x-1 text-sm text-gray-500">
+                    <p className="rounded bg-orange-300 px-1 text-orange-700">
                       PJ
                     </p>
                     <p>
@@ -51,8 +51,8 @@ export default function ProgramKerja({ notionWorkPrograms }: any) {
                       }
                     </p>
                   </div>
-                  <div className="flex space-x-1 mt-1 text-gray-500 text-sm">
-                    <p className="px-1 rounded bg-orange-300 text-orange-700">
+                  <div className="mt-1 flex space-x-1 text-sm text-gray-500">
+                    <p className="rounded bg-orange-300 px-1 text-orange-700">
                       WPJ
                     </p>
                     <p>
@@ -62,7 +62,7 @@ export default function ProgramKerja({ notionWorkPrograms }: any) {
                       }
                     </p>
                   </div>
-                  <p className="text-gray-700 mt-8">
+                  <p className="mt-8 text-gray-700">
                     {result.properties.Deskripsi.rich_text[0].text.content}
                   </p>
                 </div>
