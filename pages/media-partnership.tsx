@@ -37,14 +37,24 @@ export default function MediaPartnership({ notionWorkTasks }: any) {
                 Silakan menghubungi contact person berikut untuk informasi lebih
                 lanjut.
               </p>
-              <div className="mt-4 flex justify-center space-x-1">
+              <div className="mt-4 flex space-y-2 sm:space-y-0 sm:flex-row flex-col justify-center space-x-1">
+                <div>
+                  <a
+                    className="inline-block rounded bg-blue-500 px-2 py-1 text-blue-100 hover:bg-blue-400"
+                    href="https://wa.me/6281273737616"
+                    target="_blank"
+                  >
+                    Contact Person 1
+                  </a>
+                  <p className="text-xs">a.n. Audrey</p>
+                </div>
                 <div>
                   <a
                     className="inline-block rounded bg-blue-500 px-2 py-1 text-blue-100 hover:bg-blue-400"
                     href="https://wa.me/628993041961"
                     target="_blank"
                   >
-                    Contact Person 1
+                    Contact Person 2
                   </a>
                   <p className="text-xs">a.n. Akmal</p>
                 </div>
@@ -54,7 +64,7 @@ export default function MediaPartnership({ notionWorkTasks }: any) {
                     href="https://wa.me/6285282366531"
                     target="_blank"
                   >
-                    Contact Person 2
+                    Contact Person 3
                   </a>
                   <p className="text-xs">a.n. Fiona</p>
                 </div>
