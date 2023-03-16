@@ -41,7 +41,8 @@ export default function MediaPartnership({ notionWorkTasks }: any) {
                 <div>
                   <a
                     className="inline-block rounded bg-blue-500 px-2 py-1 text-blue-100 hover:bg-blue-400"
-                    href=""
+                    href="https://wa.me/628993041961"
+                    target="_blank"
                   >
                     Contact Person 1
                   </a>
@@ -50,7 +51,8 @@ export default function MediaPartnership({ notionWorkTasks }: any) {
                 <div>
                   <a
                     className="inline-block rounded bg-blue-500 px-2 py-1 text-blue-100 hover:bg-blue-400"
-                    href=""
+                    href="https://wa.me/6285282366531"
+                    target="_blank"
                   >
                     Contact Person 2
                   </a>
