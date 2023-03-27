@@ -12,7 +12,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   displayRole = false,
 }) => {
   return (
-    <Card className="text-center">
+    <Card className="py-8 px-4 text-center">
       <Image
         src={
           organizer.properties.Photo.files[0]?.file.url ||

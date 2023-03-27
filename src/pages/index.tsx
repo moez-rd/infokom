@@ -78,7 +78,7 @@ export default function Home({ notionWorkTasks, notionOrganizers }: any) {
         <VerticalLine />
         <Section className="grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2">
           {/* Kilasan */}
-          <Card className="relative -z-20 overflow-hidden text-center">
+          <Card className="relative -z-20 overflow-hidden py-8 px-4 text-center">
             <SectionTitle title="Kilasan" />
             <p className="text-neutral-500">
               Infokom adalah dinas yang berperan dalam pembentukkan citra
@@ -97,7 +97,7 @@ export default function Home({ notionWorkTasks, notionOrganizers }: any) {
             </svg>
           </Card>
           {/* Tujuan */}
-          <Card className="relative -z-20 overflow-hidden text-center">
+          <Card className="relative -z-20 overflow-hidden py-8 px-4 text-center">
             <SectionTitle title="Tujuan" />
             <p className="text-neutral-500">
               Menjadikan media komunikasi sebagai cermin dari Himasisko Unsri
