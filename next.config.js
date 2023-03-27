@@ -9,6 +9,20 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/program-kerja",
+        destination: "/proker",
+        permanent: true,
+      },
+      {
+        source: "/media-partnership",
+        destination: "/medpart",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
