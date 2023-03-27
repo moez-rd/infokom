@@ -5,7 +5,7 @@ import SocialMediaLink from "./SocialMediaLink";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-neutral-200 py-10">
-      <div className="mx-6 flex max-w-5xl flex-col items-center justify-between sm:mx-auto sm:flex-row">
+      <div className="mx-6 flex max-w-5xl flex-col items-center justify-between sm:mx-10 sm:flex-row md:mx-20 lg:mx-32 xl:mx-auto">
         <div className="flex flex-col text-center sm:text-left">
           <p className="text-xl font-bold text-primary-600 sm:text-2xl">
             Dinas Infokom Himasisko
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
           {/* Instagram */}
           <SocialMediaLink href={CONFIG.instagramUrl}>
             <svg
-              className="h-4 w-4 sm:h-6 sm:w-6 fill-primary-500"
+              className="h-4 w-4 fill-primary-500 sm:h-6 sm:w-6"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
             >
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
           {/* Facebook */}
           <SocialMediaLink href={CONFIG.facebookUrl}>
             <svg
-              className="h-4 w-4 sm:h-6 sm:w-6 fill-primary-500"
+              className="h-4 w-4 fill-primary-500 sm:h-6 sm:w-6"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 320 512"
             >
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
           {/* Youtube */}
           <SocialMediaLink href={CONFIG.youtubeUrl}>
             <svg
-              className="h-4 w-4 sm:h-6 sm:w-6 fill-primary-500"
+              className="h-4 w-4 fill-primary-500 sm:h-6 sm:w-6"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 576 512"
             >

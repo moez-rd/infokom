@@ -33,7 +33,7 @@ export default function Home({ notionWorkTasks, notionOrganizers }: any) {
           {/* Pengurus Dinas */}
           <div>
             <SectionTitle title="Pengurus Dinas" />
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <ProfileCard
                 organizer={getOrganizerByRole(notionOrganizers, c.LEADER)}
                 displayRole
@@ -55,7 +55,7 @@ export default function Home({ notionWorkTasks, notionOrganizers }: any) {
           <div>
             {/* Staff Multimedia */}
             <SectionTitle title="Staff Multimedia" />
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-5">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
               {filterOrganizer(notionOrganizers, c.MUL_STAFF).map(
                 (organizer: any, key: number) => (
                   <ProfileCard organizer={organizer} key={key} />
@@ -66,7 +66,7 @@ export default function Home({ notionWorkTasks, notionOrganizers }: any) {
           <div>
             {/* Staff Publikasi */}
             <SectionTitle title="Staff Publikasi" />
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
               {filterOrganizer(notionOrganizers, c.PUB_STAFF).map(
                 (organizer: any, key: number) => (
                   <ProfileCard organizer={organizer} key={key} />
@@ -76,7 +76,7 @@ export default function Home({ notionWorkTasks, notionOrganizers }: any) {
           </div>
         </Section>
         <VerticalLine />
-        <Section className="grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2">
+        <Section className="grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-2">
           {/* Kilasan */}
           <Card className="relative -z-20 overflow-hidden py-8 px-4 text-center">
             <SectionTitle title="Kilasan" />
@@ -123,7 +123,7 @@ export default function Home({ notionWorkTasks, notionOrganizers }: any) {
             title="Laporan"
             subtitle="Februari 2023 s.d. sekarang"
           />
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 ">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
             <ReportCard
               name="Hari-Hari Besar"
               count={countReports(notionWorkTasks, c.HARI_HARI_BESAR)}
