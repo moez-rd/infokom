@@ -8,7 +8,7 @@ type PostCardProps = {
 
 const PostCard: React.FC<PostCardProps> = ({ workTask }) => {
   return (
-    <Card key={workTask.id} className="py-3 sm:py-4">
+    <Card key={workTask.id} className="p-4">
       <p className="text-xs uppercase tracking-widest text-primary-600 sm:text-sm">
         {workTask.properties.Category.select.name}
       </p>

@@ -8,7 +8,7 @@ type WorkProgramCardProps = {
 
 const WorkProgramCard: React.FC<WorkProgramCardProps> = ({ workProgram }) => {
   return (
-    <Card key={workProgram.id} className="px-8">
+    <Card key={workProgram.id} className="px-8 py-8">
       <SectionTitle
         align="left"
         title={workProgram.properties.Name.title[0]?.text.content}

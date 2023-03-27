@@ -20,7 +20,7 @@ export default function Medpart() {
       <main className="space-y-10 pb-40">
         <VerticalLine />
         <Section className="max-w-2xl space-y-4">
-          <Card className="space-y-8 px-10 sm:px-20" disableEffectOnHover>
+          <Card className="space-y-8 px-10 py-8 sm:px-20" disableEffectOnHover>
             <div>
               <h2 className="mb-2 text-center text-xl font-bold">
                 Ingin Bekerja Sama dengan Himasisko?
@@ -79,7 +79,7 @@ export default function Medpart() {
               </ul>
             </div>
           </Card>
-          <Card className="px-10 sm:px-20" disableEffectOnHover>
+          <Card className="px-10 py-8 sm:px-20" disableEffectOnHover>
             <p className="text-center text-neutral-500">
               Silakan menghubungi salah satu narahubung berikut untuk informasi
               lebih lanjut.
