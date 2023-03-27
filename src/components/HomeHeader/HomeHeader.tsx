@@ -12,7 +12,7 @@ const HomeHeader: React.FC = () => {
 
   return (
     <Fragment>
-      <header className="relative -z-20 flex min-h-screen items-center justify-center overflow-hidden border-b-8 bg-gray-900 pt-14 sm:min-h-fit">
+      <header className="relative -z-20 flex min-h-screen items-center justify-center overflow-hidden border-b-8 bg-gray-900 pt-14 lg:min-h-fit">
         <Particles id="tsparticles" init={particlesInit} options={particles} />
         <svg
           className="absolute top-0 right-0 -z-10 -translate-y-[600px] translate-x-[400px] fill-indigo-600/60 blur-[200px]"
@@ -41,15 +41,15 @@ const HomeHeader: React.FC = () => {
         >
           <path d="M392,323.5Q337,407,242,404Q147,401,78.5,320.5Q10,240,79.5,161Q149,82,250.5,64Q352,46,399.5,143Q447,240,392,323.5Z" />
         </svg>
-        <div className="mx-6 mb-20 flex w-full flex-col-reverse items-center justify-between sm:mx-60 sm:mb-0 sm:flex-row sm:py-60">
-          <div className="max-w-3xl text-center sm:text-left">
-            <h1 className="z-10  text-4xl font-semibold text-white/90 sm:text-7xl">
+        <div className="mx-6 mb-20 flex w-full flex-col-reverse items-center justify-between sm:mx-20 md:mx-28 lg:mb-0 lg:items-start lg:py-60 xl:flex-row xl:items-center 2xl:mx-60">
+          <div className="max-w-3xl text-center lg:text-left">
+            <h1 className="z-10 text-4xl font-semibold text-white/90 md:text-5xl lg:text-7xl">
               <span className="bg-gradient-to-r from-indigo-500 to-indigo-300 bg-clip-text text-transparent">
                 Dinas
               </span>{" "}
               Informasi dan Komunikasi
             </h1>
-            <p className="text-white/70 sm:mt-4 sm:text-xl">
+            <p className="text-white/70 md:text-xl lg:mt-4">
               Himpunan Mahasiswa Jurusan Sistem Komputer Universitas Sriwijaya
             </p>
           </div>
@@ -58,7 +58,7 @@ const HomeHeader: React.FC = () => {
             alt="Cursor"
             width={240}
             height={240}
-            className="mb-10 w-24 sm:mb-0 sm:w-60 sm:-translate-x-40"
+            className="mb-10 w-24 lg:w-36 xl:mb-0 xl:w-60 2xl:-translate-x-40"
           ></Image>
         </div>
       </header>
