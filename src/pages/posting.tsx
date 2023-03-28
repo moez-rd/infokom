@@ -7,9 +7,6 @@ import Head from "next/head";
 import { Fragment } from "react";
 
 export default function Posting({ notionWorkTasks }: any) {
-  function getFormattedDate(date: any) {
-    return new Date(date);
-  }
   return (
     <Fragment>
       <Head>
