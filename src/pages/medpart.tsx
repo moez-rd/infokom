@@ -47,7 +47,8 @@ export default function Medpart() {
                 </li>
                 <li>
                   Poster event akan dibagikan sebanyak satu kali atau lebih
-                  sesuai dengan kesepakatan oleh Himasisko.
+                  sesuai dengan kesepakatan antara Himasisko dan pihak
+                  penyelenggara event.
                 </li>
                 <li>
                   Poster event akan dibagikan hanya melalui akun Instagram
