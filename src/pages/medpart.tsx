@@ -86,8 +86,8 @@ export default function Medpart() {
               lebih lanjut.
             </p>
             <div className="mt-4 flex flex-col items-center justify-center space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
-              <ContactPersonLink name="Rizki" phone="6287776558912" />
-              <ContactPersonLink name="Eka" phone="628117815050" />
+              {/*<ContactPersonLink name="Rizki" phone="6287776558912" />*/}
+              {/*<ContactPersonLink name="Eka" phone="628117815050" />*/}
               <ContactPersonLink name="Audrey" phone="6281273737616" />
             </div>
           </Card>
